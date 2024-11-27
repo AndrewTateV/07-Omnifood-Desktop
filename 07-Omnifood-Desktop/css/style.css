@@ -1,0 +1,699 @@
+/**************************/
+/* HEADER */
+/**************************/
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fdf2e9;
+
+  /* Because we want header to be sticky later */
+  height: 9.6rem;
+  padding: 0 4.8rem;
+}
+
+.logo {
+  height: 2.2rem;
+}
+
+/**************************/
+/* NAVIGATION */
+/**************************/
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #cf711f;
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  color: #fff;
+  background-color: #e67e22;
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #cf711f;
+}
+
+/**************************/
+/* HERO SECTION */
+/**************************/
+
+.section-hero {
+  background-color: #fdf2e9;
+  padding: 4.8rem 0 9.6rem 0;
+}
+
+.hero {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9.6rem;
+  align-items: center;
+}
+
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.delivered-meals {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-top: 8rem;
+}
+
+.delivered-imgs {
+  display: flex;
+}
+
+.delivered-imgs img {
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+  margin-right: -1.6rem;
+  border: 3px solid #fdf2e9;
+}
+
+.delivered-imgs img:last-child {
+  margin: 0;
+}
+
+.delivered-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.delivered-text span {
+  color: #cf711f;
+  font-weight: 700;
+}
+
+/**************************/
+/* FEATURED IN SECTION */
+/**************************/
+
+.section-featured {
+  padding: 4.8rem 0 3.2rem 0;
+}
+.heading-featured-in {
+  text-align: center;
+  margin-bottom: 2.4rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  font-weight: 500;
+  color: #888;
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logos img {
+  height: 3.2rem;
+  opacity: 50%;
+  /* filter 是一个 CSS 属性，用于为元素（通常是图像、背景、文本等）应用图形效果，比如模糊、亮度、对比度等。通过使用 filter，你可以轻松地对页面中的元素添加视觉效果，而不需要使用图像编辑软件对原始图片进行操作。
+
+filter 属性可以对元素实现类似 Photoshop 中的效果，且可以用于图像、背景和其他 HTML 元素，使页面的设计更加生动。它的常见用途包括模糊背景、增加色调、调整亮度等。 */
+  filter: brightness(0);
+}
+
+/**************************/
+/* HOW IT WORKS SECTION */
+/**************************/
+
+.section-how {
+  padding: 9.6rem 0;
+}
+
+.step-number {
+  font-size: 8.6rem;
+  font-weight: 600;
+  color: #ddd;
+  margin-bottom: 1.2rem;
+}
+
+.step-description {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+.step-img-box {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/**************************/
+/* HOW IT WORKS SECTION */
+/**************************/
+
+.section-how {
+  padding: 9.6rem 0;
+}
+
+.step-number {
+  font-size: 8.6rem;
+  font-weight: 600;
+  color: #ddd;
+  margin-bottom: 1.2rem;
+}
+
+.step-description {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+.step-img-box {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-img {
+  width: 35%;
+  /* z-index: 10; */
+}
+
+/* <img> 元素不能直接使用伪元素，例如 ::before 或 ::after。这是因为伪元素通常用于创建不存在于 DOM 结构中的虚拟内容，或者用于在已有内容之前或之后插入内容。而 <img> 元素是一个自闭合的替换元素，它的内容是图像本身，因此伪元素无法被插入或应用到其内容之中。 */
+/* 替代方法：如何给 <img> 元素增加装饰效果
+虽然 <img> 元素不能直接使用伪元素，但我们可以通过其他方法达到类似的效果，以下是一些常见的替代方法：
+
+1. 使用包裹容器
+你可以将 <img> 元素包裹在一个 <div> 容器中，然后对容器使用伪元素。这是最常见的方法，尤其当你需要在图片的周围加一些额外的视觉效果时。 */
+/* 简单来说，伪元素就是给父元素添加一个子元素 */
+/* 伪元素默认是inline */
+
+.step-img-box::before {
+  content: "";
+  width: 60%;
+  /* 在这个代码片段中，伪元素 .step-img-box::before 通过 height: 60% 并没有产生预期效果的原因，主要涉及空内容伪元素的高度计算机制。我将解释为什么 height: 60% 没有作用以及 padding-bottom 如何有效地创建比例高度。
+
+1. height: 60% 不起作用的原因
+在 CSS 中，伪元素（例如 ::before 和 ::after）经常被用于装饰目的。在这里，伪元素 .step-img-box::before 是一个空内容的块级元素，其内容通过 content: "" 定义为空。因此，直接使用 height: 60% 时，可能不会如预期生效，原因如下：
+
+空内容的伪元素高度为 0： 伪元素本质上并没有实际内容。在 HTML 中，如果一个元素没有内容，并且它的高度由内容支撑（而不是明确的 height 设置），它的高度会为 0。这意味着如果没有明确的内容撑开这个伪元素，height: 60% 也不会生效，因为父元素的内容并不能提供基准来计算伪元素的相对高度。
+
+height 的百分比依赖父元素的高度： 如果父元素本身的高度不是显式定义的，伪元素的 height: 60% 就无法正确地计算高度。例如，父元素高度可能是由子元素、内容或者其他间接方式撑开的，这种情况下，伪元素的百分比高度无法有效地应用。
+
+2. padding-bottom: 60% 如何起作用
+相比之下，使用 padding-bottom 来创建比例高度 是一种常见的技巧，尤其在做响应式布局的时候。这种方法可以有效地使高度与父元素的宽度保持某种比例。具体来说：
+
+padding-bottom 的百分比是相对于父元素的宽度来计算的： 在 CSS 中，水平方向的内边距（padding-left 和 padding-right）百分比是基于父元素的宽度，而 padding-bottom 的百分比也是基于父元素的宽度。这意味着，如果你设置 padding-bottom: 60%，它将计算父元素宽度的 60%，并将其应用为伪元素的下内边距。
+
+形成高度的幻象： 这种方式实际上是通过内边距来撑开伪元素的高度，而不是直接设置 height。这种做法的好处在于它可以在没有设置明确高度的情况下，使元素保持比例关系。这种方法特别适用于需要保持某种特定宽高比的情况下，例如实现固定比例的容器（如正方形、宽高比为 16:9 的视频容器等）。 */
+
+  /* height: 60%; */
+  padding-bottom: 60%;
+  background-color: #fdf2e9;
+
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -2;
+}
+
+.step-img-box::after {
+  content: "";
+  width: 45%;
+  padding-bottom: 45%;
+  background-color: #fae5d3;
+
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+/**************************/
+/* MEALS SECTION */
+/**************************/
+
+.section-meals {
+  padding: 9.6rem 0;
+}
+
+.meal {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 11px;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+
+.meal:hover {
+  transform: translateY(-1.2rem);
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+}
+
+.meal-content {
+  padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+}
+
+.meal-tags {
+  margin-bottom: 1.2rem;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #333;
+  border-radius: 100px;
+  font-weight: 600;
+}
+
+.tag--vegetarian {
+  background-color: #51cf66;
+}
+.tag--vegan {
+  background-color: #94d82d;
+}
+.tag--paleo {
+  background-color: #ffd43b;
+}
+
+.meal-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 3.2rem;
+}
+
+.meal-attributes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.meal-attribute {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.meal-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  color: #e67e22;
+}
+
+.meal-img {
+  width: 100%;
+}
+
+.all-recipes {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+/**************************/
+/* TESTIMONIALS SECTION */
+/**************************/
+
+.section-testimonials {
+  background-color: #fdf2e9;
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  align-items: center;
+}
+
+.testimonials-container {
+  padding: 9.6rem;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 4.8rem;
+  column-gap: 8rem;
+}
+
+.testimonials img {
+  width: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 1.6rem;
+}
+
+.testimonial-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+}
+
+.testimonials-name {
+  font-size: 1.6rem;
+  color: #777;
+}
+
+.gallery-item img {
+  /* 因为img默认是inline，所以直接会有小的间隔，改成block解决 */
+  display: block;
+  width: 100%;
+  transition: all 0.4s;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  padding: 1.6rem;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
+
+.gallery-item {
+  /* overflow:hidden 在容器设置 */
+  overflow: hidden;
+}
+
+/**************************/
+/* MEALS SECTION */
+/**************************/
+
+.section-pricing {
+  padding: 9.6rem 0;
+}
+
+.princing-plan {
+  border-radius: 11px;
+
+  width: 75%;
+}
+.princing-plan--starter {
+  justify-self: end;
+  border: 2px solid #fdf2e9;
+  padding: 4.6rem;
+}
+.princing-plan--complete {
+  background-color: #fdf2e9;
+  padding: 4.8rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.princing-plan--complete::after {
+  content: "Best value";
+  position: absolute;
+  top: 6%;
+  right: -18%;
+
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #333;
+  background-color: #ffd43b;
+  padding: 0.8rem 8rem;
+  transform: rotate(45deg);
+}
+
+.plan-header {
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+
+.plan-name {
+  color: #cf711f;
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin-bottom: 3.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75;
+}
+
+.plan-price {
+  font-size: 6.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.6rem;
+}
+
+.plan-price span {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-right: 0.8rem;
+}
+
+.plan-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #6f6f6f;
+}
+
+.plan-sing-up {
+  /* 在CSS中，text-align 属性主要用于控制文本的水平对齐方式。它影响的是inline行内内容（如文本、图片、链接等）的对齐方式，但不影响block块级元素（如 <div>、<p> 等）的对齐方式。常见的值有： */
+  text-align: center;
+  margin-top: 4.8rem;
+}
+
+.plan-details {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.feature-icon {
+  color: #e67e22;
+  height: 3.2rem;
+  width: 3.2rem;
+  background-color: #fdf2e9;
+  margin-bottom: 3.2rem;
+  /* 让我解释一下为什么 padding 在这里生效：
+首先，你给 .feature-icon 设置了明确的 height 和 width 属性。当一个 inline 元素被设置了这两个属性时，它会自动变成 inline-block。
+inline-block 元素既具有 inline 元素的特性（和其他元素在同一行），又具有 block 元素的特性（可以设置宽高、margin、padding 等）。
+所以实际上发生了以下过程：
+ion-icon 默认是 inline
+设置了 width 和 height 后自动变成 inline-block
+因为变成了 inline-block，所以可以接受 padding 属性
+如果你想验证这一点，可以使用浏览器开发者工具查看元素，你会发现该元素的 display 计算值是 inline-block。
+这是一个常见的 CSS 行为，类似的例子还有 img 元素，它们默认也是 inline 元素，但是一旦设置了宽高，就会表现得像 inline-block 元素。 */
+  padding: 1.6rem;
+  border-radius: 50%;
+}
+
+.feature-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+
+.feature-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+/**************************/
+/* CTA SECTION */
+/**************************/
+
+.section-cta {
+  /* top / right / bottom / left */
+  /* padding: 9.6rem 0 12.8rem 0; */
+
+  /* top / horizontal / left */
+  padding: 4.8rem 0 12.8rem;
+}
+
+.cta {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  /* background-color: #e67e22; */
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  border-radius: 11px;
+
+  /* 渐变色！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！ */
+  /* background-image: linear-gradient(90deg,red,#e67e22); */
+  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+  overflow: hidden;
+}
+
+.cta-text-box {
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  color: #45260a;
+}
+
+.cta .heading-secondary {
+  /* color: #45260a; */
+  color: inherit;
+  margin-bottom: 3.2rem;
+}
+
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 4.8rem;
+}
+
+.cta-img-box {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(235, 151, 78, 0.35),
+      rgba(230, 125, 34, 0.35)
+    ),
+    url("../img/eating.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+}
+
+.cta-form label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  background-color: #fdf2e9;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.cta-form input::placeholder {
+  color: #aaa;
+}
+.cta *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+}
+
+/**************************/
+/* FOOTER */
+/**************************/
+
+.footer {
+  padding: 12.8rem 0;
+  border-top: 1px solid #eee;
+}
+.grid--footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 3.2rem;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #767676;
+  /* 1. Flexbox 布局中的对齐
+在 Flexbox 布局中，使用 margin-top: auto 可以让元素在容器中自动分配剩余的垂直空间，通常用来将元素推到底部或者分配多余的空间。
+
+举个例子，如果你有一个垂直排列的 Flex 容器，并且想要将子元素对齐到容器的底部，可以使用 margin-top: auto。 */
+  margin-top: auto;
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.address {
+  margin-bottom: 2.4rem;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767676;
+  transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #555;
+}

@@ -1,0 +1,295 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+} */
+/* html { */
+  /* 这种形式不好 用户不好切换字体大小 */
+  /* font-size: 10px */
+  /* 10px / 16px =0.625= 62.5% */
+  /* font-size: 62.5%; */
+/* } */
+
+/* max-width 是一个 CSS（层叠样式表）属性，用于定义元素可以拥有的最大宽度。它特别适用于确保容器、图像或文本等元素不会超过指定的宽度，从而保持设计布局的一致性，并且在大屏幕上更易于阅读。
+width 定义了元素的固定或相对宽度。
+max-width 定义了元素的最大宽度上限，这意味着元素可以缩小到比这个值更小，但不会扩展到比它更大。 */
+/* .test {
+  background-color: red;
+  /* padding: 100px; */
+  /*width: 1000px;*/
+
+
+  /* 默认 1rem=16px */
+  /* rem rem 是一种相对单位，用于在 CSS（层叠样式表）中表示元素的尺寸（例如字体大小、边距、填充等）。它的全称是 "root em"，表示相对于根元素（<html> 标签）的字体大小。 */
+  /* rem 是相对于根元素（通常是 <html>）的字体大小来进行计算的。这意味着，如果你调整了根元素的字体大小，所有使用 rem 的元素都会根据这个变化进行缩放，这样可以方便地调整页面的整体大小，实现响应式设计。
+
+可缩放：使用 rem 的页面在需要调整文本大小时更加灵活。用户可以通过浏览器的缩放功能或者自定义设置来改变根元素的字体大小，而所有使用 rem 的元素都会随之调整。这对于提高页面的可访问性非常重要，尤其是为那些有视觉障碍的用户提供更好的阅读体验。
+
+响应式布局：在响应式设计中，使用 rem 可以方便地根据设备尺寸改变根元素的字体大小，从而调整整个页面的布局和比例，使其在不同设备上看起来都比较合适。 */
+  /* color: #fff;
+  font-size: 2rem;
+  padding: 4rem;
+} */
+
+/* 在HTML和CSS中，margin: 0 auto 是一种常用的布局方式，通常用于使块级元素水平居中。这种方法依赖于元素的 宽度 (width) 属性。要理解为什么需要先设置宽度，以下是详细解释：
+
+1. margin: 0 auto 的含义
+margin: 0 auto 是一种设置 上/下外边距为0，左右外边距为自动 的方式。
+auto 值表示浏览器会自动计算左右边距，使左右边距相等，从而实现水平居中效果。
+2. 为什么需要设置 width？
+当我们设置 margin: 0 auto 时，浏览器会通过调整左右边距来实现元素的水平居中。但如果这个元素的宽度没有定义，浏览器就不知道它的“总宽度”是多少，因此无法自动计算左右边距来实现居中。
+
+宽度的定义：
+
+默认宽度：块级元素的默认宽度是 100%，也就是充满父元素的整个宽度。
+自定义宽度：当你明确设置了 width，比如 width: 600px，元素就不会再占满整个父容器，而是有了一个固定的宽度。 */
+.section-hero {
+  background-color: #fdf2e9;
+
+  padding: 4.8rem 0 9.6rem 0;
+}
+.hero {
+  max-width: 130rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9.6rem;
+  margin: 0 auto;
+  align-items: center;
+  padding: 0 3.2rem;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+
+/* css grid我没理解点补充 gap：row column；
+<row-gap>：行之间的间距（垂直方向）。
+<column-gap>：列之间的间距（水平方向）。
+
+为什么row-gap是垂直方向？？
+行之间的间距指的是垂直方向的原因，主要是因为我们在网格（grid）布局中将行和列看作类似于电子表格或表格的概念。为了更好地理解这一点，可以将**行（row）和列（column）**的关系与二维表格的结构类比：
+
+行和列的定义：
+行（Row）：水平方向的一排元素称为一行。我们从上到下数，会有第1行、第2行等等。
+列（Column）：垂直方向的一列元素称为一列。我们从左到右数，会有第1列、第2列等等。
+在网格布局中，行之间的间距表示的是各行之间的垂直距离，所以这个间距自然是垂直方向的。这种定义是基于行与行之间存在的空间，即每一行的底部和其下方下一行的顶部之间的空隙。
+ */
+
+/* .btn:link,
+.btn:visited {
+  display: inline-block;
+  font-size: 2rem;
+  padding: 1.6rem 3.2rem;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 9px; */
+  /* transition 是 CSS 中用于设置元素在 状态变化 时的 过渡效果 的属性。通过 transition，可以使元素在属性值改变时有一个平滑的过渡过程，而不是直接发生瞬间变化。这使得用户界面看起来更加自然、流畅，也提升了用户体验。
+
+transition 属性的基本语法
+transition 属性通常用于控制以下几种动画参数：
+
+css
+复制代码
+transition: property duration timing-function delay;
+各个参数的详细说明如下：
+
+property：需要应用过渡的 CSS 属性。
+
+例如，width、background-color、opacity 等。
+可以使用 all 来表示对所有支持过渡的属性应用过渡。
+duration：过渡的持续时间。
+
+例如，1s 表示 1 秒，500ms 表示 500 毫秒。
+如果不设置持续时间，默认值是 0s，也就是没有过渡效果。
+timing-function（可选）：过渡的时间曲线，也就是过渡的加速或减速方式。
+
+常见值包括：
+ease：默认值，先慢后快再慢。
+linear：匀速效果。
+ease-in：渐快。
+ease-out：渐慢。
+ease-in-out：先加速后减速。
+cubic-bezier(n, n, n, n)：自定义的贝塞尔曲线，可以精确控制时间曲线。
+delay（可选）：过渡开始前的延迟时间。
+
+例如，1s 表示在 1 秒后才开始执行过渡效果。 */
+
+  /* transition: background-color 0.3s; */
+  /* transition 要放在初始位置！！！！！ */
+/* } */
+
+/* .btn--full:link,
+.btn--full:visited {
+  background-color: #e67e22;
+  color: #fff;
+}
+.btn-outline:link,
+.btn-outline:visited {
+  background-color: #fff;
+  color: #555;
+}
+
+.btn--full:hover,
+.btn--full:active {
+  background-color: #cf711f;
+}
+
+/* 小技巧 想要border在容器里面 就用box-shadow */
+/* .btn-outline:hover,
+.btn-outline:active {
+  background-color: #fdf2e9;
+  box-shadow: inset 0 0 0 3px #fff;
+} */ 
+
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
+
+.delivered-meals {
+  display: flex;
+  margin-top: 8rem;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+/* gap 属性在 CSS 的 Flex 布局中不支持负值。因此，设置 gap: -50px; 是无效的，导致它在这里不起作用。
+如果您想实现元素之间的重叠效果，可以使用负的 margin。例如，针对您的 .delivered-imgs img 类 */
+.delivered-imgs {
+  display: flex;
+  /* gap: -50px; */
+}
+
+.delivered-imgs img {
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+  margin-right: -1.6rem;
+  border: 3px solid #fdf2e9;
+}
+.delivered-imgs img:last-child {
+  margin-right: 0;
+}
+.delivered-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.delivered-text span {
+  color: #cf711f;
+  font-weight: 700;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fdf2e9;
+
+  /* 为什么要设置高度 因为header随着滑动 也就是position：fixed 脱离文本流 */
+  height: 9.6rem;
+  padding: 0 4.8rem;
+}
+.header-img {
+  height: 2.2rem;
+}
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+/* 有2 */
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #cf711f;
+}
+/* 这样写 有3 确保不被上面覆盖 */
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  color: #fff;
+  background-color: #e67e22;
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #cf711f;
+}
+
+/**************************/
+/* GENRAL REUSABLE COMPONENTS */
+/**************************/
+
+
+
+.section-how {
+  padding: 9.6rem 0;
+}
+
+.step-img {
+  width: 50%;
+}
+
+.step-number{
+                    font-size: 8.6rem;
+                    font-weight: 600;
+                    color: #ddd;
+                    margin-bottom: 1.2rem;
+}
+
+
+.step-description{
+font-size: 1.8rem;
+line-height: 1.8;
+
+
+}
+
+.step-img-box{
+
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/* flexbox为什么没有justify-self
+ChatGPT 说：
+ChatGPT
+在 Flexbox 布局模型中，确实没有直接等效的 justify-self 属性，这是因为 Flexbox 的对齐方式和 CSS Grid 的对齐方式是不同的。下面详细解释为什么 Flexbox 中没有 justify-self，以及你可以如何实现类似的效果。
+
+为什么 Flexbox 没有 justify-self
+在 Flexbox 中，对齐的概念是基于 主轴 (main axis) 和 交叉轴 (cross axis)，并且是以整个容器 (container) 为基础来定义的，而不是单独对每一个子元素进行操作。这种布局设计的核心思想与 Grid 不太一样，导致没有 justify-self 这种属性。
+
+以下几点可以解释这个问题：
+
+Flex Container 的对齐控制
+
+在 Flexbox 中，子元素的对齐方式大部分由父级容器（也就是 Flex Container）控制。
+使用 justify-content 可以控制子元素沿着主轴的对齐方式。
+使用 align-items 可以控制子元素沿着交叉轴的对齐方式。
+单个元素的对齐方式
+
+在 Flexbox 中，控制单个子元素的对齐属性是 align-self，但这是针对交叉轴方向的。它可以用来覆盖父容器的 align-items 设置，以便对单个子元素进行不同的垂直对齐。
+但是沿着主轴方向（水平或垂直取决于 flex-direction 的设置）没有类似 justify-self 的属性，因为在 Flexbox 中，沿主轴的对齐方式是整体性的，由 justify-content 控制所有子元素。 */
+
+
